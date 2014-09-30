@@ -9,11 +9,18 @@
 import UIKit
 import XCTest
 
-class SwiftNSNotificationTests: XCTestCase {
+class SwiftNSNotificationTests: XCTestCase, ClassADelegate {
+    
+    var objA : ClassA!
+    var objB : ClassB!
+    var expectation : XCTestExpectation!;
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.objA = ClassA(delegate: self);
+        self.objA.registerObserver();
+        
+        self.objB = ClassB();
     }
     
     override func tearDown() {
@@ -23,14 +30,19 @@ class SwiftNSNotificationTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        self.expectation = self.expectationWithDescription("receive notification from B to A");
+
+        self.objB.sendNotification();
+        self.waitForExpectationsWithTimeout(10.0, handler: nil);
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+  
+    func notificationReceived(notif : NSNotification) {
+        self.expectation.fulfill()
+        XCTAssert(notif.object != nil, "notification sender is nil");
+        var o : NSObject = notif.object! as NSObject
+        XCTAssert(o == objB, "notification sender is not objB");
+        
+        XCTAssert(notif.name == notificationName, "notification.name != \(notificationName)");
     }
-    
 }

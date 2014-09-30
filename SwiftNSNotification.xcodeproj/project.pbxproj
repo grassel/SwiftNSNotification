@@ -13,6 +13,12 @@
 		C52BADEC19DB25F30079BD4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52BADEB19DB25F30079BD4E /* Images.xcassets */; };
 		C52BADEF19DB25F30079BD4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C52BADED19DB25F30079BD4E /* LaunchScreen.xib */; };
 		C52BADFB19DB25F30079BD4E /* SwiftNSNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BADFA19DB25F30079BD4E /* SwiftNSNotificationTests.swift */; };
+		C52BAE0519DB262B0079BD4E /* ClassA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAE0419DB262B0079BD4E /* ClassA.swift */; };
+		C52BAE0719DB28620079BD4E /* ClassB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAE0619DB28620079BD4E /* ClassB.swift */; };
+		C52BAE0A19DB2BE10079BD4E /* ClassADelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAE0919DB2BE10079BD4E /* ClassADelegate.swift */; };
+		C52BAE0B19DB2D760079BD4E /* ClassA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAE0419DB262B0079BD4E /* ClassA.swift */; };
+		C52BAE0C19DB2D7A0079BD4E /* ClassB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAE0619DB28620079BD4E /* ClassB.swift */; };
+		C52BAE0D19DB2D7C0079BD4E /* ClassADelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAE0919DB2BE10079BD4E /* ClassADelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,9 @@
 		C52BADF419DB25F30079BD4E /* SwiftNSNotificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNSNotificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52BADF919DB25F30079BD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C52BADFA19DB25F30079BD4E /* SwiftNSNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNSNotificationTests.swift; sourceTree = "<group>"; };
+		C52BAE0419DB262B0079BD4E /* ClassA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassA.swift; sourceTree = "<group>"; };
+		C52BAE0619DB28620079BD4E /* ClassB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassB.swift; sourceTree = "<group>"; };
+		C52BAE0919DB2BE10079BD4E /* ClassADelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassADelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +92,9 @@
 				C52BADEB19DB25F30079BD4E /* Images.xcassets */,
 				C52BADED19DB25F30079BD4E /* LaunchScreen.xib */,
 				C52BADE219DB25F30079BD4E /* Supporting Files */,
+				C52BAE0419DB262B0079BD4E /* ClassA.swift */,
+				C52BAE0619DB28620079BD4E /* ClassB.swift */,
+				C52BAE0919DB2BE10079BD4E /* ClassADelegate.swift */,
 			);
 			path = SwiftNSNotification;
 			sourceTree = "<group>";
@@ -212,8 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52BAE0519DB262B0079BD4E /* ClassA.swift in Sources */,
 				C52BADE719DB25F30079BD4E /* ViewController.swift in Sources */,
 				C52BADE519DB25F30079BD4E /* AppDelegate.swift in Sources */,
+				C52BAE0A19DB2BE10079BD4E /* ClassADelegate.swift in Sources */,
+				C52BAE0719DB28620079BD4E /* ClassB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52BAE0C19DB2D7A0079BD4E /* ClassB.swift in Sources */,
+				C52BAE0D19DB2D7C0079BD4E /* ClassADelegate.swift in Sources */,
+				C52BAE0B19DB2D760079BD4E /* ClassA.swift in Sources */,
 				C52BADFB19DB25F30079BD4E /* SwiftNSNotificationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
